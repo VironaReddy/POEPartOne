@@ -1,0 +1,42 @@
+﻿@model POEOne.Models.ClaimApproval
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClaimApproval</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Approver)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Approver)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApprovalDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApprovalDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Approve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Approve)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lecturers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lecturers.LecturerID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ClaimApprovalId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
